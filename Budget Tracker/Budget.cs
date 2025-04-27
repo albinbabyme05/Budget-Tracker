@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Budget_Tracker
 {
-    internal class Budget
+    public  class Budget
     {
+        private double LimitAmount;
+        private string Category;
+
+        public Budget(string category, double limitAmount)
+        {
+            Category = category;
+            LimitAmount = limitAmount;
+        }
     }
 }
