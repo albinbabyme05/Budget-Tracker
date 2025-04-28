@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Budget_Tracker
 {
-    internal class TravelExpense : Expense
+    public class TravelExpense : Expense
     {
         public TravelExpense(double amount, string category, string date, string description) : base(amount, category, date, description)
         {
