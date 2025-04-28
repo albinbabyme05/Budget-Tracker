@@ -16,18 +16,23 @@ namespace Budget_Tracker
             Category = category;
             LimitAmount = limitAmount;
         }
-        
+
+        public string GetBudgetCategory() => Category;
+        public double GetLimitAmount() => LimitAmount;
+
+        public void SetBudgetCategory(string category) { Category = category; }
+        public void SetLimit(double limit) { LimitAmount = limit; }
 
         public bool IswithinBudget(double totalSpent)
         {
-            if(totalSpent <= LimitAmount)
+            if(LimitAmount >= totalSpent)
             {
-                Console.WriteLine("Expence within the limit");
+                //Console.WriteLine("Expense within the limit");
                 return true;
             }
             else
             {
-                Console.WriteLine("Expense is over the Limit");
+                //Console.WriteLine("Expense is over the Limit");
                 return false;
             }
         }
@@ -41,7 +46,7 @@ namespace Budget_Tracker
             }
             else
             {
-                return totalSpent - LimitAmount;
+                return LimitAmount - totalSpent;
             }
         }
     }
