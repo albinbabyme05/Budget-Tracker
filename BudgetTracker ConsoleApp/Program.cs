@@ -37,10 +37,9 @@ class Program
             {
                 FoodExpense foodExpense = new FoodExpense(amount, category, date, description);
                 Budget foodBudget = new Budget(category, 150);
-                Budget foodBudget1 = new Budget(category, 100);
-                manager.SetBudget(foodBudget);
+                
                 manager.AddExpense(foodExpense);
-                manager.AddBudget(foodBudget);
+                manager.SetBudget(foodBudget);
             }
             else
             {
