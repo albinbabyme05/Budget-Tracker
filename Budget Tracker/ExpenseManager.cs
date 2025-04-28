@@ -39,6 +39,7 @@ namespace Budget_Tracker
                 {
                     amount += item.GetAmount();
                 }
+
             }
             if (amount == 0)
             {
@@ -52,6 +53,7 @@ namespace Budget_Tracker
         {
             return new List<Expense>(ExpensesList);
         }
+
 
     }
 }
