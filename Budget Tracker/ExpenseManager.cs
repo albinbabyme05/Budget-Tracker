@@ -33,6 +33,7 @@ namespace Budget_Tracker
                 {
                     amount += item.GetAmount();
                 }
+
             }
             if (amount == 0)
             {
