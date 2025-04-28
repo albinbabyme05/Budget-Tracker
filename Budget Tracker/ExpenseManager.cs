@@ -39,13 +39,18 @@ namespace Budget_Tracker
                 {
                     amount += item.GetAmount();
                 }
-                else
-                {
-                    Console.WriteLine("item not found");
-                    return 0;
-                }
             }
+            if (amount == 0)
+            {
+                Console.WriteLine($"No item found with {category} Category");
+            }
+            Console.WriteLine($"Total expense in {category} Category : {amount}");
             return amount;
+        }
+
+        public List<Expense> GetAllExpense()
+        {
+            return new List<Expense>(ExpensesList);
         }
 
     }
